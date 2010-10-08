@@ -1,0 +1,19 @@
+#!/bin/bash
+if test $# -ne 1 #argüman sayısına bakıyor
+	then
+		echo Usage: $0 ordinary_file
+		exit 1
+fi 
+
+if [ -f "$1" ] # ordinary dosya ise koşul sağlanır.
+	then	
+		filename=$1 # 1. argüman değişkene atanır. 
+		set -- $(ls -il $filename)‏ # i inode no'sunu verir . l 'de listeler.
+		echo 
+		echo  $filename  inode number: $1 #çıktının 1. elemanı inod no'yu verir.
+		echo  $filename  size: $6 
+		exit 0
+        else
+                echo $0: argument must be an ordinary file 
+                exit 1
+fi

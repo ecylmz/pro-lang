@@ -1,0 +1,7 @@
+#!/bin/bash
+
+for kisi in `cat liste` # dosyadan kişi listesini okur . Ters tırnaklara dikkat !
+do
+	mail -s"Konu" $kisi < mail.txt
+done
+

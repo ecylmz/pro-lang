@@ -1,0 +1,10 @@
+#!/bin/bash
+
+if [ -d "$1" ]
+	then
+		kac_tane=$(ls "$1" | wc -l )
+fi
+
+echo $kac_tane 
+
+exit 0
